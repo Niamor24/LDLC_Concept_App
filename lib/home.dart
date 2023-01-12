@@ -11,10 +11,16 @@ class _Home extends State<Home> {
     var _h = MediaQuery.of(context).size.height;
     var _w = MediaQuery.of(context).size.width;
     return Scaffold(
-        backgroundColor: Colors.white,
-        body: Container(
-          height: _h,
-          width: _w,
-        ));
+      backgroundColor: Colors.white,
+      body: Container(
+        height: _h,
+        width: _w,
+        child: Row(
+          children: [
+            Container(),
+          ],
+        ),
+      ),
+    );
   }
 }
