@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'LDLC APP',
+      title: 'LDLC',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -33,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
     var _h = MediaQuery.of(context).size.height;
     var _w = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 0, 81, 147),
+      backgroundColor: const Color(0xFF103f86),
       body: Container(
         height: _h,
         width: _w,
@@ -44,7 +44,10 @@ class _MyHomePageState extends State<MyHomePage> {
               width: _w * 0.60,
               margin: const EdgeInsets.only(top: 100),
               decoration: const BoxDecoration(
-                image: DecorationImage(image: AssetImage('images/LDLC.png')),
+                image: DecorationImage(
+                    image: AssetImage(
+                  'images/LDLCb.png',
+                )),
               ),
             ),
             Container(
@@ -61,13 +64,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   icon: Icon(Icons.person),
                   border: InputBorder.none,
                   hintText: 'E-mail',
+                  hintStyle: TextStyle(
+                    fontStyle: FontStyle.italic,
+                  ),
                 ),
               ),
             ),
             Container(
               height: _h * 0.05,
               width: _w * 0.7,
-              margin: const EdgeInsets.only(top: 50),
+              margin: const EdgeInsets.only(top: 25),
               padding: const EdgeInsets.only(left: 10),
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -76,9 +82,13 @@ class _MyHomePageState extends State<MyHomePage> {
               child: TextFormField(
                 obscureText: true,
                 decoration: const InputDecoration(
-                    icon: Icon(Icons.lock),
-                    border: InputBorder.none,
-                    hintText: 'Mot de passe'),
+                  icon: Icon(Icons.lock),
+                  border: InputBorder.none,
+                  hintText: 'Mot de passe',
+                  hintStyle: TextStyle(
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
               ),
             ),
             GestureDetector(
@@ -92,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Container(
                 height: _h * 0.05,
                 width: _w * 0.70,
-                margin: const EdgeInsets.only(top: 20),
+                margin: const EdgeInsets.only(top: 50),
                 padding: const EdgeInsets.only(top: 8),
                 //color: Colors.white,
                 decoration: BoxDecoration(
