@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_application_web/home.dart';
 import 'package:test_application_web/main.dart';
 import 'package:test_application_web/map.dart';
 import 'package:test_application_web/panier.dart';
@@ -24,17 +25,26 @@ class _Profil extends State<Profil> {
               color: const Color(0xFF0b3b83),
               child: Row(
                 children: [
-                  Container(
-                    height: _h,
-                    width: _w * 0.3,
-                    //color: Colors.red,
-                    decoration: const BoxDecoration(
-                      border: Border(
-                        right: BorderSide(width: 0.5, color: Colors.white),
-                      ),
-                      image: DecorationImage(
-                        image: AssetImage('images/LDLChightech.png'),
-                        fit: BoxFit.fill,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => Home(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      height: _h,
+                      width: _w * 0.3,
+                      //color: Colors.red,
+                      decoration: const BoxDecoration(
+                        border: Border(
+                          right: BorderSide(width: 0.5, color: Colors.white),
+                        ),
+                        image: DecorationImage(
+                          image: AssetImage('images/LDLChightech.png'),
+                          fit: BoxFit.fill,
+                        ),
                       ),
                     ),
                   ),
